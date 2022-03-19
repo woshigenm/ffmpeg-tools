@@ -5,7 +5,7 @@ import calendar;
 import time;
         
 os.system("clear")
-
+os.system("toilet -f mono12 -F gay 'Tools'")
 def nm(number):
  try:
    if len(number)==0:
@@ -28,10 +28,12 @@ def xnm(nux):
        else:
              return False
   except: 
-       return False               
+       return False           
+           
 global num
-print("""0-查看支持格式        1-获取视频信息
-2-下载m3u8链接       3-录制直播源
+print("""
+0-查看支持格式        1-获取视频信息
+2-下载m3u8            3-录制直播源
 4-删除视频的音频      5-转换视频格式
 6-视频压编码          7-提取视频音频
 8-调整视频尺寸        9-光流法补帧
@@ -41,28 +43,22 @@ print("""0-查看支持格式        1-获取视频信息
 16-添加图像音频       17-时间剪视频文件
 18-时间剪音频文件     19-切分视频
 20-合并视频           21-添加字幕文件
-22-转换字幕文件       23-调整视频倍率
-24-图片合成视频       25-视频转换GIF
-26-照片合成视频       27-视频提取音频
-29-视频提截取片       28-元数据打印txt
-30-照片合视频         31-提取音频
-32-速率播放           33-画中画
-34-添加水印           35-翻转
-36-音频合并           37-音频混音
-38-补帧               39-调整音量
-40-创空音频           41-avi转mp4
-42-截取缩微图         43-图片转换
-44-图片转换(推荐)     45-裁剪图片
-46-旋转图片           47-图片黑白
-48-图片加水印         49-下b站视频
-50-获取视频信息       51-真实URL
-52-解析json           53-下载视频
-54-获取元数据         55-删除文件GPS信息
-56-打印尺寸,曝光       57-写入并读取标签
-58-删除元数据         59-修改比特率
-60-翻转视频           61-高斯模糊
-62-退出               63-视频合音频
-64-GIF转mp4           65-图片视频封面\n""")
+22-转换字幕           23-视频倍率
+24-图片合成视频       25-视频转GIF
+26-照片合成视频       27-视频提音频
+29-视频提截取片       30-照片合视频
+31-提取音频           32-速率播放
+33-画中画             35-添加水印
+36-翻转               37-音频合并 
+38-音频混音           39-补帧
+40-调整音量           41-创空音频
+43-截取缩微图         44-图片转换
+45-图片转换           46-裁剪图片
+47-旋转图片           48-图片黑白
+49-图片加水印         50-修改比特率
+51-翻转视频           52-高斯模糊
+53-视频合音频         54-GIF转mp4
+55-图片视频封面       56-退出""")
 try:
    num =int(input('输入[0-67]:'))
    if num == 0:
@@ -161,7 +157,7 @@ try:
     o=str(input("视频文件:"))
     if nm(o):
       print("尺寸大小 ——如 1280:720")
-      s=str(input("尺寸大小:"))
+      s=str(input("尺寸:"))
       if nm(s):
         t=str(input("保存地址:"))
         if nm(t):
@@ -216,7 +212,7 @@ try:
    if  num ==13:
     os.system("clear")
     os.system("ls")
-    e=str(input("PDF文件(后缀不用):"))
+    e=str(input("PDF文件(不带后缀):"))
     if nm(e):
       o=str(input("图片密度:"))
       if nm(o):
@@ -238,9 +234,9 @@ try:
     os.system("ls")
     o=str(input("视频:"))
     if nm(o):
-      e=str(input("裁剪部分的宽度:"))
+      e=str(input("裁剪宽度:"))
       if xnm(e):      
-        f=str(input("裁剪部分的高度:"))
+        f=str(input("裁剪高度:"))
         if xnm(f):
           five=str(input("x轴裁剪位:"))
           if xnm(five):
@@ -263,7 +259,7 @@ try:
        print("请输入正确的值")
    if  num == 15:
     os.system("clear")
-    o=str(input("视频(带后缀:"))
+    o=str(input("视频(后缀):"))
     if nm(o):
        e=str(input("保存地址"))
        if nm(e):
@@ -281,7 +277,7 @@ try:
     os.system("ls")
     o=str(input("视频:"))
     if nm(o):
-       t=str(input("你要插入的图片:"))
+       t=str(input("插入的图片:"))
        if nm(t):
          e=str(input("保存地址"))
          if nm(e):
@@ -299,9 +295,9 @@ try:
     if nm(o):
        t=str(input("开始时间:"))
        if xnm(t):
-          e=str(input("截取时间(以秒计算):"))
+          e=str(input("截取时间(秒):"))
           if xnm(e):
-            print("如果不想改变视频的bit率,下面两个参数可以不填") 
+            print("如果不想改变视频的bit率,两个参数可以不填") 
             l=str(input("是否输入bit格式(-b:v)"))
             h=str(input("bit率:"))
             f=str(input("保存地址:"))
@@ -372,7 +368,7 @@ try:
     os.system("ls")
     o=str(input("音频:"))
     if nm(o):
-      t=str(input("字幕文件(如:ass/srt/vtt):"))
+      t=str(input("字幕文件(ass/srt/vtt):"))
       if nm(t):
         e=str(input("保存地址:"))
         if nm(e):
@@ -388,7 +384,7 @@ try:
     os.system("ls")
     o=str(input("字幕文件:"))
     if nm(o):
-       t=str(input("转化成的格式:"))
+       t=str(input("转化格式:"))
        if nm(t):
          os.system('ffmpeg -y -hide_banner -threads 16 -i {} {}'.format(o,t))
        else:
@@ -618,9 +614,9 @@ try:
       if nm(mao):
         t=str(input("水印图片:"))
         if nm(t):
-           e=str(input("宽高(宽:高):"))
+           e=str(input("宽(宽:高):"))
            if nm(e):
-             f=str(input("宽高(宽:高):"))
+             f=str(input("高(宽:高):"))
              if nm(f):
                five=str(input("视频保存地址:"))
                if nm(five):
@@ -723,22 +719,6 @@ try:
     o=str(input("音频保存地址"))
     if nm(o):
       os.system('ffmpeg -y -hide_banner -threads 16-f lavfi -i anullsrc -t 20 {}'.format(o)  )
-    else:
-       print("请输入正确的值")
-   if  num == 41:
-    os.system("clear")
-    os.system("ls")
-    o=str(input("音频(不带后缀):"))
-    if nm(o):   
-      t=str(input("bit率:"))
-      if nm(t):      
-        e=str(input("视频保存地址(不带后缀):"))
-        if nm(e):
-          os.system('ffmpeg -y -hide_banner -threads 16 -i {}.avi -c:v libx264 -crf 19 -preset slow -c:a aac -b:a {}k -ac 2 {}.mp4'.format(o,t,e))
-        else:
-           print("请输入正确的值")
-      else:       
-        print("请输入正确的值")
     else:
        print("请输入正确的值")
    if  num == 42:
@@ -881,95 +861,6 @@ try:
        print("请输入正确的值")    
    if  num== 49:
     os.system("clear")
-    if nm(t):
-      t=str(input("BV号:"))
-      print("以下是可供下载的视频:")
-      os.system('you-get -i https://www.bilibili.com/video/{}'.format(t))
-      o=str(input("画质(请看上面的视频信息)):"))
-      if nm(o):
-        os.system('you-get --format={} https://www.bilibili.com/video/{}'.format(o,t))
-      else:
-       print("请输入正确的值")
-    else:
-       print("请输入正确的值")
-   if  num==50:
-    os.system("clear")
-    o=str(input("链接:"))
-    if nm(o):
-      os.system('you-get -i {}'.format(o))
-    else:
-        print("请输入正确的值")
-   if  num ==51:
-    os.system("clear")
-    o=str(input("链接:"))
-    if nm(o):
-      os.system('you-get -u {}'.format(o))
-    else:
-       print("请输入正确的值")
-   if  num ==52:
-    os.system("clear")
-    o=str(input("链接:"))
-    if nm(o):
-      os.system('you-get --json {}'.format(o))
-    else:
-       print("请输入正确的值")
-   if  num == 54:
-    os.system("clear")
-    os.system("ls")
-    o=str(input("文件:"))
-    if nm(o):
-      os.system('exiftool {}'.format(o))
-    else:
-       print("请输入正确的值")
-   if  num ==55:
-    os.system("clear")
-    os.system("ls")
-    o=str(input("文件:"))
-    if nm(o):
-      os.system('exiftool -gps:all= {}'.format(o))
-    else:
-        print("请输入正确的值")
-   if  num == 56:
-    os.system("clear")
-    os.system("ls")
-    o=str(input("照片:"))
-    if nm(o):      
-      os.system('exiftool -s -ImageSize -ExposureTime {}'.format(o))
-    else:
-        print("请输入正确的值")
-   if  num == 57:
-    os.system("clear")
-    print("如果填入一个目录,将会将当前目录所有文件写入标签")
-    os.system("ls")
-    o=str(input("文件:"))
-    if nm(o):
-      t=str(input("写入的信息:"))
-      if nm(t):
-        os.system('exiftool -artist={} {}'.format(t,o))
-        print("---------------------------------------------------------------------------------------------------------")
-        os.system('exiftool -a -u -g1 {}'.format(o))
-      else:
-        print("请输入正确的值")         
-    else:
-       print("请输入正确的值")        
-   if  num ==58:
-    os.system("clear")
-    os.system("ls")
-    o=str(input("文件:"))
-    if nm(o):
-      os.system('exiftool -all= -r {}'.format(o))
-    else:
-       print("请输入正确的值")
-   if  num == 28:
-    os.system("clear")
-    os.system("ls")
-    o=str(input("文件地址:"))
-    if nm(o):
-      os.system('exiftool -r -w .txt {}'.format(o))
-    else:
-      print("请输入正确的值") 
-   if  num== 59:
-    os.system("clear")
     os.system("ls")
     o=str(input("文件地址"))
     if nm(o):
@@ -983,7 +874,7 @@ try:
        print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num==60:
+   if  num==50:
     os.system("clear")
     os.system("ls")
     o=str(input("视频文件:"))
@@ -999,7 +890,7 @@ try:
          print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num==61:
+   if  num==51:
     os.system("clear")
     os.system("ls")
     o=str(input("视频文件:"))
@@ -1011,10 +902,7 @@ try:
        print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num == 62:
-    print("程序已退出")
-    exit()
-   if num==63:
+   if num==52:
      os.system("clear")
      os.system("ls")
      one=str(input("视频文件:"))
@@ -1030,7 +918,7 @@ try:
           print("请输入正确的值")          
      else:
         print("请输入正确的值")
-   if num==64:
+   if num==53:
      os.system("clear")
      os.system("ls")
      one=str(input("GIF文件:"))
@@ -1044,7 +932,7 @@ try:
          print("请输入正确的值")
      else:
          print("请输入正确的值")
-   if num ==65:
+   if num ==54:
     os.system("clear")
     os.system("ls")
     one=str(input("视频文件:"))
@@ -1060,23 +948,8 @@ try:
          print("请输入正确的值")
     else:
         print("请输入正确的值")
-   if  num == 68:
-    os.system("clear")
-    one=str(input("链接:"))
-    if nm(one):
-      os.system('lux --aria2 "{}"'.format(one))
-    else:
-       print("请输入正确的值")
-   if num ==69:
-     os.system("clear")
-     one=str(input("批量处理文件后缀:"))  
-     if nm(one):
-      two=str(input("转换格式:"))
-      if nm(two):
-            os.system('for f in *.{}; do ffmpeg -i $f "${f%.*}.{}"; done'.format(one,two))
-      else:
-       print("请输入正确的值")
-     else:
-       print("请输入正确的值")
+   if num ==55:
+     print("程序已退出")
+     exit()
 except:
       print("请输入正确的值")
