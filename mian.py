@@ -55,7 +55,7 @@ print("""
 43-截取缩微图         44-图片转换
 45-图片转换           46-裁剪图片
 47-旋转图片           48-图片黑白
-49-图片加水印         50-修改比特率
+49-图片加水印         49-修改比特率
 51-翻转视频           52-高斯模糊
 53-视频合音频         54-GIF转mp4
 55-图片视频封面       56-退出""")
@@ -714,14 +714,14 @@ try:
           print("请输入正确的值")          
     else:
        print("请输入正确的值")
-   if  num == 40:
+   if  num == 41:
     os.system("clear")
     o=str(input("音频保存地址"))
     if nm(o):
-      os.system('ffmpeg -y -hide_banner -threads 16-f lavfi -i anullsrc -t 20 {}'.format(o)  )
+      os.system('ffmpeg -y -hide_banner -threads 16-f lavfi -i anullsrc -t 20 {}'.format(o))
     else:
        print("请输入正确的值")
-   if  num == 42:
+   if  num == 43:
     os.system("clear")
     os.system("ls")
     o=str(input("视频:"))
@@ -745,7 +745,7 @@ try:
          print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num == 43:
+   if  num == 44:
     os.system("clear")
     os.system("ls")
     o=str(input("照片:"))
@@ -759,7 +759,7 @@ try:
            print("请输入正确的值")
       else:
         print("请输入正确的值")
-   if  num == 44:
+   if  num == 45:
     os.system("clear")
     os.system("ls")
     t=str(input("图片:"))
@@ -779,7 +779,7 @@ try:
          print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num == 45:
+   if  num == 46:
     os.system("clear")
     os.system("ls")
     five=str(input("图片:"))
@@ -807,7 +807,7 @@ try:
         print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num == 46:
+   if  num == 47:
     os.system("clear")
     os.system("ls")
     t=str(input("图片):"))
@@ -823,7 +823,7 @@ try:
          print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num == 47:
+   if  num == 48:
     os.system("clear")
     os.system("ls")
     o=str(input("图片:"))
@@ -835,7 +835,7 @@ try:
          print("请输入正确的值")    
     else:
        print("请输入正确的值")   
-   if  num == 48:
+   if  num == 49:
     os.system("clear")
     os.system("ls")
     o=str(input("图片:"))
@@ -859,7 +859,7 @@ try:
          print("请输入正确的值")
     else:
        print("请输入正确的值")    
-   if  num== 49:
+   if  num== 50:
     os.system("clear")
     os.system("ls")
     o=str(input("文件地址"))
@@ -869,12 +869,12 @@ try:
       p=str(input("bit率大小(100k):"))
       e=str(input("保存地址:"))
       if nm(e):      
-        os.system('ffmpeg -y -hide_banner -threads 16 -i {} {} {} {}'.format(o,t,p,e))
+         os.system('ffmpeg -y -hide_banner -threads 16 -i {} {} {} {}'.format(o,t,p,e))
       else:
-       print("请输入正确的值")
+        print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num==50:
+   if  num==51:
     os.system("clear")
     os.system("ls")
     o=str(input("视频文件:"))
@@ -890,7 +890,7 @@ try:
          print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if  num==51:
+   if  num==52:
     os.system("clear")
     os.system("ls")
     o=str(input("视频文件:"))
@@ -902,7 +902,7 @@ try:
        print("请输入正确的值")
     else:
        print("请输入正确的值")
-   if num==52:
+   if num==53:
      os.system("clear")
      os.system("ls")
      one=str(input("视频文件:"))
@@ -918,7 +918,7 @@ try:
           print("请输入正确的值")          
      else:
         print("请输入正确的值")
-   if num==53:
+   if num==54:
      os.system("clear")
      os.system("ls")
      one=str(input("GIF文件:"))
@@ -932,7 +932,7 @@ try:
          print("请输入正确的值")
      else:
          print("请输入正确的值")
-   if num ==54:
+   if num ==55:
     os.system("clear")
     os.system("ls")
     one=str(input("视频文件:"))
@@ -948,7 +948,7 @@ try:
          print("请输入正确的值")
     else:
         print("请输入正确的值")
-   if num ==55:
+   if num ==56:
      print("程序已退出")
      exit()
 except:
